@@ -14,23 +14,36 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
   window.addEventListener("scroll", () => {
+
+  // Animate counters when section enters viewport
+  const aboutSection = document.getElementById("about");
+  let countersAnimated = false;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!countersAnimated && entry.isIntersecting) {
+        countersAnimated = true;
+        document.querySelectorAll("[data-count]").forEach(el => {
+          const target = +el.dataset.count;
+          let count = 0;
+          const step = Math.ceil(target / 50);
+          const interval = setInterval(() => {
+            count = Math.min(count + step, target);
+            el.textContent = count;
+            if (count === target) clearInterval(interval);
+          }, 50);
+        });
+        observer.unobserve(aboutSection);
+      }
+    });
+  }, { threshold: 0.5 });
+  if (aboutSection) observer.observe(aboutSection);
+
     if (flag && headerContent) {
       const maxTranslate = headerContent.clientWidth - flag.clientWidth - 20;
       const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
       const translateX = Math.min(Math.max(scrollPercent * maxTranslate, 0), maxTranslate);
       flag.style.transform = `translateX(${translateX}px)`;
     }
-  });
-
-  document.querySelectorAll("[data-count]").forEach(el => {
-    const target = +el.dataset.count;
-    let count = 0;
-    const step = Math.ceil(target / 50);
-    const interval = setInterval(() => {
-      count = Math.min(count + step, target);
-      el.textContent = count;
-      if (count === target) clearInterval(interval);
-    }, 50);
   });
 
   fetch("questions.json")
