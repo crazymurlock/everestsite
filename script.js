@@ -3,33 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const closeBtn = document.querySelector(".close");
   const cancelModal = document.getElementById("cancelModal");
-  const contactTriggers = [contactBtn];
 
-  // Обработка открытия модалки
-  contactTriggers.forEach(btn => {
-    if (btn) btn.onclick = () => modal.style.display = "flex";
-  });
-  if (closeBtn) closeBtn.onclick = () => modal.style.display = "none";
-  if (cancelModal) cancelModal.onclick = () => modal.style.display = "none";
-  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
+  contactBtn.addEventListener("click", () => modal.style.display = "flex");
+  closeBtn.addEventListener("click", () => modal.style.display = "none");
+  cancelModal.addEventListener("click", () => modal.style.display = "none");
+  window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
-  // Анимированные счётчики
   const counters = document.querySelectorAll("[data-count]");
   counters.forEach(el => {
     const target = +el.dataset.count;
     let count = 0;
+    const step = Math.ceil(target / 50);
     const interval = setInterval(() => {
-      if (count >= target) {
-        clearInterval(interval);
-        el.textContent = target;
-      } else {
-        count += Math.ceil(target / 50);
-        el.textContent = count;
-      }
+      count = Math.min(count + step, target);
+      el.textContent = count;
+      if (count === target) clearInterval(interval);
     }, 50);
   });
 
-  // Загрузка квиза
   fetch("questions.json")
     .then(r => r.json())
     .then(questions => {
@@ -46,18 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         `;
-
         document.querySelectorAll(".quiz-option").forEach(btn => {
-          btn.onclick = () => {
+          btn.addEventListener("click", () => {
             const idx = +btn.dataset.index;
-            const correct = q.answer;
+            const correct = questions[current].answer;
             if (idx === correct) {
               btn.classList.add("correct");
-              btn.innerHTML += " 😄";
+              btn.textContent += " 😄";
               score++;
             } else {
               btn.classList.add("wrong");
-              btn.innerHTML += " 😢";
+              btn.textContent += " 😢";
               document.querySelector(`.quiz-option[data-index='${correct}']`).classList.add("correct");
             }
             document.querySelectorAll(".quiz-option").forEach(b => b.disabled = true);
@@ -66,25 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
               if (current < questions.length) showQuestion();
               else showResult();
             }, 1500);
-          };
+          });
         });
       }
 
       function showResult() {
-        container.innerHTML = \`
+        container.innerHTML = `
           <div class="quiz-result">
-            <h3>Вы набрали \${score} из \${questions.length}</h3>
+            <h3>Вы набрали ${score} из ${questions.length}</h3>
             <div class="confetti">🎉🎉🎉</div>
-            <button id="finalContact">Записаться</button>
-          </div>\`;
-        document.getElementById("finalContact").onclick = () => modal.style.display = "flex";
+            <button id="finalContact" class="btn btn-primary">Записаться</button>
+          </div>
+        `;
+        document.getElementById("finalContact").addEventListener("click", () => modal.style.display = "flex");
       }
 
       showQuestion();
     })
-    .catch(err => {
-      const container = document.getElementById("quiz-container");
-      if (container) container.innerHTML = "<p>Ошибка загрузки квиза.</p>";
+    .catch(() => {
+      document.getElementById("quiz-container").innerHTML = "<p>Ошибка загрузки квиза.</p>";
     });
 });
 
