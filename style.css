@@ -147,3 +147,37 @@ header {
   height: 50px;
   object-fit: contain;
 }
+
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+button.primary {
+  background: #005AFF;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button.primary:hover {
+  background: #0041c2;
+}
+button.secondary {
+  background: #f2f2f2;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button.secondary:hover {
+  background: #e4e4e4;
+}
+.quiz-option:hover {
+  background: #e0edff !important;
+}
