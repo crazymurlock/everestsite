@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
   // Flag movement on scroll
+  // Flag and progress-bar on scroll
   window.addEventListener("scroll", () => {
-    if (flag && headerContent) {
+    if (flag && headerContent && progressBar) {
       const maxTranslate = headerContent.clientWidth - flag.clientWidth - 20;
       const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      
-    const translateX = Math.min(Math.max(scrollPercent * maxTranslate, 0), maxTranslate);
-    flag.style.transform = `translateX(${translateX}px)`;
-    if (progressBar) progressBar.style.transform = `translateX(${translateX}px)`;
-
+      const translateX = Math.min(Math.max(scrollPercent * maxTranslate, 0), maxTranslate);
+      flag.style.transform = `translateX(${translateX}px)`;
+      const percent = Math.min(Math.max(scrollPercent * 100, 0), 100);
+      progressBar.style.width = percent + "%";
     }
   });
 
