@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".close");
   const cancelModal = document.getElementById("cancelModal");
   const flag = document.querySelector(".flag-img");
+  const progressBar = document.querySelector(".progress-bar");
   const headerContent = document.querySelector(".header-content");
 
   if (contactBtn) contactBtn.addEventListener("click", () => modal.style.display = "flex");
@@ -18,8 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (flag && headerContent) {
       const maxTranslate = headerContent.clientWidth - flag.clientWidth - 20;
       const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      const translateX = Math.min(Math.max(scrollPercent * maxTranslate, 0), maxTranslate);
-      flag.style.transform = `translateX(${translateX}px)`;
+      
+    const translateX = Math.min(Math.max(scrollPercent * maxTranslate, 0), maxTranslate);
+    flag.style.transform = `translateX(${translateX}px)`;
+    if (progressBar) progressBar.style.transform = `translateX(${translateX}px)`;
+
     }
   });
 
