@@ -6,12 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const cancelModal = document.getElementById("cancelModal");
   const flag = document.querySelector(".flag-img");
   const progressBar = document.querySelector(".progress-bar");
+  const signupQuiz = document.getElementById("signupQuiz");
+  const tryPlay = document.getElementById("tryPlay");
   const headerContent = document.querySelector(".header-content");
 
   if (contactBtn) contactBtn.addEventListener("click", () => modal.style.display = "flex");
   if (corpBtn) corpBtn.addEventListener("click", () => modal.style.display = "flex");
   if (closeBtn) closeBtn.addEventListener("click", () => modal.style.display = "none");
   if (cancelModal) cancelModal.addEventListener("click", () => modal.style.display = "none");
+  if (signupQuiz) signupQuiz.addEventListener("click", () => modal.style.display = "flex");
+  if (tryPlay) tryPlay.addEventListener("click", () => scrollToQuiz());
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
   // Flag movement on scroll
