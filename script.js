@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const closeBtn = document.querySelector(".close");
   const cancelModal = document.getElementById("cancelModal");
+  const corpBtn = document.getElementById("corpBtn");
 
   contactBtn.addEventListener("click", () => modal.style.display = "flex");
+  corpBtn.addEventListener("click", () => modal.style.display = "flex");
   closeBtn.addEventListener("click", () => modal.style.display = "none");
   cancelModal.addEventListener("click", () => modal.style.display = "none");
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
