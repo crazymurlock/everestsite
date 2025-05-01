@@ -1,0 +1,149 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background: #F2F7FF;
+  color: #2C2C2C;
+}
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #005AFF;
+}
+#contactBtn {
+  background: #005AFF;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero button {
+  background: #005AFF;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.about .counters {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  margin: 2rem auto;
+}
+.quiz {
+  text-align: center;
+  padding: 2rem;
+}
+#quiz-container {
+  margin-top: 2rem;
+}
+.partners {
+  padding: 2rem;
+  text-align: center;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logo-box {
+  width: 120px;
+  height: 60px;
+  background: white;
+  margin: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease forwards;
+  animation-delay: calc(0.05s * var(--i));
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.modal-content button {
+  background: #005AFF;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 50px;
+}
+.corporate {
+  padding: 3rem 2rem;
+  background: #ffffff;
+  text-align: center;
+}
+.corporate-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.corporate-gallery img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.corporate-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.corporate-logos img {
+  height: 50px;
+  object-fit: contain;
+}

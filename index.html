@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everest Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Everest Quiz Logo" class="logo-img" />
+    <button id="contactBtn">Связаться</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Интеллектуально-развлекательная игра</h1>
+      <p>Присоединяйтесь к лучшим квизам страны!</p>
+      <button onclick="scrollToQuiz()">Играть сейчас</button>
+    </section>
+
+    <section class="about">
+      <h2>О нас</h2>
+      <div class="counters">
+        <div><span data-count="150">0</span><p>Проведённых игр</p></div>
+        <div><span data-count="3000">0</span><p>Игроков</p></div>
+        <div><span data-count="50">0</span><p>Компаний</p></div>
+      </div>
+    </section>
+
+    <section class="quiz" id="quiz">
+      <h2>Попробуйте мини-квиз</h2>
+      <div id="quiz-container" class="quiz-wrapper"></div>
+    </section>
+
+    <section class="partners">
+      <h2>Партнёры</h2>
+      <div class="logos">
+        <div class="logo-box" style="--i:1">Лого 1</div><div class="logo-box" style="--i:2">Лого 2</div><div class="logo-box" style="--i:3">Лого 3</div><div class="logo-box" style="--i:4">Лого 4</div><div class="logo-box" style="--i:5">Лого 5</div><div class="logo-box" style="--i:6">Лого 6</div><div class="logo-box" style="--i:7">Лого 7</div><div class="logo-box" style="--i:8">Лого 8</div><div class="logo-box" style="--i:9">Лого 9</div><div class="logo-box" style="--i:10">Лого 10</div><div class="logo-box" style="--i:11">Лого 11</div><div class="logo-box" style="--i:12">Лого 12</div><div class="logo-box" style="--i:13">Лого 13</div><div class="logo-box" style="--i:14">Лого 14</div><div class="logo-box" style="--i:15">Лого 15</div>
+      </div>
+    </section>
+
+    <section class="corporate">
+      <h2>Корпоративные квизы</h2>
+      <p>Мы проводим интеллектуальные квизы для компаний — тимбилдинг, праздники и тренинги с увлекательной игрой. Индивидуальный подход и полный сервис.</p>
+      <div class="corporate-gallery">
+        <img src="https://via.placeholder.com/300x200" alt="Фото 1" />
+        <img src="https://via.placeholder.com/300x200" alt="Фото 2" />
+        <img src="https://via.placeholder.com/300x200" alt="Фото 3" />
+      </div>
+      <div class="corporate-logos">
+        <img src="https://via.placeholder.com/100x50?text=Client+1" />
+        <img src="https://via.placeholder.com/100x50?text=Client+2" />
+        <img src="https://via.placeholder.com/100x50?text=Client+3" />
+        <img src="https://via.placeholder.com/100x50?text=Client+4" />
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Связаться с нами</h2>
+      <form>
+        <input type="text" placeholder="Ваше имя" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Сообщение"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Everest Quiz
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
