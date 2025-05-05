@@ -188,3 +188,15 @@ footer{text-align:center;padding:2rem;color:#999;}
 .partners h2 {
   margin-bottom: 2rem;
 }
+
+/* Partners section centering */
+.partners {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #F2F7FF;
+}
+.partners h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
