@@ -32,7 +32,7 @@ main{padding-top:66px;}
   height: 60vh;
   background-image: url('assets/mnt.png'), url('https://via.placeholder.com/1200x400');
   background-repeat: no-repeat, no-repeat;
-  background-position: left calc(100% + 50px), center;
+  background-position: left bottom, center;
   background-size: contain, cover;
 }
 .hero-content{text-align:center;max-width:90%;}
@@ -63,7 +63,7 @@ main{padding-top:66px;}
 .quiz-result h3{font-size:2rem;color:#005AFF;}
 .quiz-result .confetti{font-size:3rem;}
 /* Partners */
-.partners{border-top: 4px solid #005AFF; padding:4rem 2rem;text-align:center;}
+.partners{border-top: 4px solid #A1C2F7; padding:4rem 2rem;text-align:center;}
 .logos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
 .logo-box{padding:1rem;border:1px solid #ccc;border-radius:8px;}
 
@@ -106,4 +106,10 @@ footer{text-align:center;padding:2rem;color:#999;}
 }
 .download-btn:hover {
   background: #0041c2;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-position: right calc(100% + 50px), center;
+  }
 }
