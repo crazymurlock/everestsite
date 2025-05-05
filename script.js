@@ -20,10 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     if (flag && progressBar && headerContent) {
       const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      const maxTranslate = headerContent.clientWidth - flag.clientWidth - 20;
+      const maxTranslate = headerContent.clientWidth - flag.clientWidth;
       const translateX = scrollPercent * maxTranslate;
       flag.style.transform = `translateX(${translateX}px)`;
-      progressBar.style.width = `${(scrollPercent*100).toFixed(2)}%`;
+      progressBar.style.width = `${translateX}px`;
+      flag.style.opacity = scrollPercent > 0 ? "1" : "0";
     }
   });
 
