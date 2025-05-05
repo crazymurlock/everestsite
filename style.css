@@ -63,7 +63,7 @@ main{padding-top:66px;}
 .quiz-result h3{font-size:2rem;color:#005AFF;}
 .quiz-result .confetti{font-size:3rem;}
 /* Partners */
-.partners{ padding:4rem 2rem;text-align:center;}
+.partners{ padding:4rem 2rem;text-align:center; text-align: center;}
 .logos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
 .logo-box{padding:1rem;border:1px solid #ccc;border-radius:8px;}
 
