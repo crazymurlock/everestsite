@@ -86,6 +86,21 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.onclick=()=>track.scrollBy({left:-cardWidth,behavior:"smooth"});
     nextBtn.onclick=()=>track.scrollBy({left:cardWidth,behavior:"smooth"});
   }
+
+  // Photo slider controls
+  const photoTrack = document.querySelector('.photo-slider-track');
+  const photoPrev = document.querySelector('.slider-btn.photo-prev');
+  const photoNext = document.querySelector('.slider-btn.photo-next');
+  if (photoTrack && photoPrev && photoNext) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 16;
+    photoPrev.addEventListener('click', () => {
+      photoTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    photoNext.addEventListener('click', () => {
+      photoTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
 });
 
 function scrollToQuiz(){

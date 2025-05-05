@@ -63,7 +63,7 @@ main{padding-top:66px;}
 .quiz-result h3{font-size:2rem;color:#005AFF;}
 .quiz-result .confetti{font-size:3rem;}
 /* Partners */
-.partners{border-top: 4px solid #A1C2F7; padding:4rem 2rem;text-align:center;}
+.partners{ padding:4rem 2rem;text-align:center;}
 .logos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
 .logo-box{padding:1rem;border:1px solid #ccc;border-radius:8px;}
 
@@ -112,4 +112,53 @@ footer{text-align:center;padding:2rem;color:#999;}
   .hero {
     background-position: right calc(100% + 50px), center;
   }
+}
+
+.photo-slider {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #F2F7FF;
+}
+.photo-slider h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.photo-slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+.photo-slider-track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.photo-card {
+  min-width: 220px;
+  margin: 0 0.5rem;
+  flex-shrink: 0;
+}
+.photo-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.slider-btn.photo-prev,
+.slider-btn.photo-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+.slider-btn.photo-prev {
+  left: -20px;
+}
+.slider-btn.photo-next {
+  right: -20px;
 }
