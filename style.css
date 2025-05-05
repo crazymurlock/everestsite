@@ -5,11 +5,11 @@ h1,h2,h3{margin-bottom:1rem;font-weight:700;}
 p{margin-bottom:1rem;}
 
 /* Header */
-header{position:fixed;top:0;left:0;width:100%;height:95px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);z-index:1000;}
-.header-content{position:relative;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:95px;padding:0 2rem;}
+header{position:fixed;top:0;left:0;width:100%;height:93px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);z-index:1000;}
+.header-content{position:relative;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:93px;padding:0 2rem;}
 .logo-flag-container{display:flex;flex-direction:column;align-items:flex-start;}
 .logo-img{height:40px;}
-.flag-img{width:24px;height:auto;position:fixed;top:64px;left:0;z-index:2002;transition:transform 0.1s linear;;opacity:0;transition:transform 0.1s linear,opacity 0.2s linear;}
+.flag-img{width:24px;height:auto;position:fixed;top:66px;left:0;z-index:2002;transition:transform 0.1s linear;;opacity:0;transition:transform 0.1s linear,opacity 0.2s linear;}
 .progress-bar{position:absolute;bottom:0;left:0;width:0;height:4px;background:#005AFF;z-index:2001;}
 
 
@@ -24,8 +24,17 @@ header{position:fixed;top:0;left:0;width:100%;height:95px;background:white;box-s
 .btn-secondary:hover{background:#e0e0e0;}
 
 /* Hero */
-main{padding-top:93px;}
-.hero{display:flex;align-items:center;justify-content:center;height:60vh;background:url('https://via.placeholder.com/1200x400')center/cover no-repeat;}
+main{padding-top:66px;}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-image: url('assets/mnt.png'), url('https://via.placeholder.com/1200x400');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, center;
+  background-size: contain, cover;
+}
 .hero-content{text-align:center;max-width:90%;}
 .hero h1{font-size:clamp(2rem,5vw,4rem);}
 .hero p{font-size:clamp(1rem,3vw,2rem);}
@@ -97,12 +106,4 @@ footer{text-align:center;padding:2rem;color:#999;}
 }
 .download-btn:hover {
   background: #0041c2;
-}
-
-/* Hero: add mountain image on left, adaptive */
-.hero {
-  background-image: url('assets/mnt.png'), url('https://via.placeholder.com/1200x400');
-  background-position: left center, center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto 100%, cover;
 }
