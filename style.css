@@ -187,11 +187,60 @@ footer{text-align:center;padding:2rem;color:#999;}
 
 
 
-/* Auto photo slider */
-.photo-slider { padding: 2rem 0; }
-.photo-slider-container { overflow: hidden; width: 100%; }
-.photo-slider-track { display: flex; gap: 0.5rem; will-change: transform; }
-.photo-card { flex: 0 0 auto; width: 120px; }
-.photo-card img { width: 100%; height: auto; border-radius: 4px; object-fit: cover; }
-/* Hide navigation buttons */
-.slider-btn { display: none; }
+/* About block text same color as counters */
+.about-content h2,
+.about-content p,
+.counter-card p {
+  color: #005AFF;
+}
+
+/* Photo slider */
+.photo-slider {
+  padding: 2rem 0;
+}
+.photo-slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.photo-slider-track {
+  display: flex;
+  gap: 0.5rem;
+}
+.photo-card {
+  flex: 0 0 auto;
+  width: 120px;
+}
+.photo-card img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Sponsors block */
+.sponsors {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.sponsors h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2C2C2C;
+}
+.sponsors-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.sponsor-logo {
+  width: 150px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

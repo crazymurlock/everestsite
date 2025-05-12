@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
   [contactBtn, signupQuiz, corpBtn].forEach(btn => {
     if (btn) btn.addEventListener("click", () => modal.style.display = "flex");
   
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (closeBtn) closeBtn.addEventListener("click", () => modal.style.display = "none");
   if (cancelModal) cancelModal.addEventListener("click", () => modal.style.display = "none");
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; 
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -53,15 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
       flag.style.opacity = scrollPercent > 0 ? "1" : "0";
     }
   
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -84,30 +84,30 @@ document.addEventListener("DOMContentLoaded", () => {
               if (count===target) clearInterval(interval);
             }, 50);
           
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
 });
         }
       
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -132,29 +132,29 @@ document.addEventListener("DOMContentLoaded", () => {
           container.querySelectorAll(".quiz-option").forEach(b=>b.disabled=true);
           setTimeout(()=> current<questions.length-1 ? showQuestion() : showResult(), 1500);
         
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
 });
       
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -166,15 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     showQuestion();
   
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -188,74 +188,95 @@ document.addEventListener("DOMContentLoaded", () => {
   if(track && prevBtn && nextBtn){
     const cardWidth=document.querySelector(".team-card").clientWidth+32;
     prevBtn.onclick=()=>track.scrollBy({left:-cardWidth,behavior:"smooth"
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
 });
     nextBtn.onclick=()=>track.scrollBy({left:cardWidth,behavior:"smooth"
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
 });
   }
 
-      
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider controls
+  const photoTrack = document.querySelector('.photo-slider-track');
+  const photoPrev = document.querySelector('.slider-btn.photo-prev');
+  const photoNext = document.querySelector('.slider-btn.photo-next');
+  if (photoTrack && photoPrev && photoNext) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 16;
+    photoPrev.addEventListener('click', () => {
+      photoTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' 
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
+    }, 3000);
+  }
+
+});
+    
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
+    setInterval(() => {
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
 });
     photoNext.addEventListener('click', () => {
       photoTrack.scrollBy({ left: cardWidth, behavior: 'smooth' 
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
 });
     
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -263,15 +284,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
@@ -279,15 +300,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function scrollToQuiz(){
   document.getElementById("quiz")?.scrollIntoView({behavior:"smooth"
-  // Auto photo slider
-  const track = document.querySelector('.photo-slider-track');
-  if (track) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    let pos = 0;
+  // Photo slider auto-scroll
+  const trackAuto = document.querySelector('.photo-slider-track');
+  let pos = 0;
+  if (trackAuto) {
     setInterval(() => {
-      pos += cardWidth;
-      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
-      track.scrollTo({ left: pos, behavior: 'smooth' });
+      const cardW = document.querySelector('.photo-card').clientWidth + 8;
+      if (pos >= trackAuto.scrollWidth - trackAuto.clientWidth) pos = 0;
+      trackAuto.scrollTo({ left: pos, behavior: 'smooth' });
+      pos += cardW;
     }, 3000);
   }
 
