@@ -13,36 +13,32 @@ document.addEventListener("DOMContentLoaded", () => {
   [contactBtn, signupQuiz, corpBtn].forEach(btn => {
     if (btn) btn.addEventListener("click", () => modal.style.display = "flex");
   
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
   if (closeBtn) closeBtn.addEventListener("click", () => modal.style.display = "none");
   if (cancelModal) cancelModal.addEventListener("click", () => modal.style.display = "none");
   window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; 
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
@@ -57,18 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
       flag.style.opacity = scrollPercent > 0 ? "1" : "0";
     }
   
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
@@ -90,35 +84,31 @@ document.addEventListener("DOMContentLoaded", () => {
               if (count===target) clearInterval(interval);
             }, 50);
           
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
         }
       
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
@@ -142,34 +132,30 @@ document.addEventListener("DOMContentLoaded", () => {
           container.querySelectorAll(".quiz-option").forEach(b=>b.disabled=true);
           setTimeout(()=> current<questions.length-1 ? showQuestion() : showResult(), 1500);
         
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
       
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
@@ -180,18 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     showQuestion();
   
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
@@ -204,144 +188,107 @@ document.addEventListener("DOMContentLoaded", () => {
   if(track && prevBtn && nextBtn){
     const cardWidth=document.querySelector(".team-card").clientWidth+32;
     prevBtn.onclick=()=>track.scrollBy({left:-cardWidth,behavior:"smooth"
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
     nextBtn.onclick=()=>track.scrollBy({left:cardWidth,behavior:"smooth"
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
   }
 
-  // Photo slider controls
-  const photoTrack = document.querySelector('.photo-slider-track');
-  const photoPrev = document.querySelector('.slider-btn.photo-prev');
-  const photoNext = document.querySelector('.slider-btn.photo-next');
-  if (photoTrack && photoPrev && photoNext) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 16;
-    photoPrev.addEventListener('click', () => {
-      photoTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' 
-  // Photo slider controls
+      
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
-  }
-
-});
-    
-  // Photo slider controls
-  const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
-    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
     photoNext.addEventListener('click', () => {
       photoTrack.scrollBy({ left: cardWidth, behavior: 'smooth' 
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
     
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
   }
 
 
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });
 
 function scrollToQuiz(){
   document.getElementById("quiz")?.scrollIntoView({behavior:"smooth"
-  // Photo slider controls
+  // Auto photo slider
   const track = document.querySelector('.photo-slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-  if (track && prevBtn && nextBtn) {
+  if (track) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    });
+    let pos = 0;
+    setInterval(() => {
+      pos += cardWidth;
+      if (pos >= track.scrollWidth - track.clientWidth) pos = 0;
+      track.scrollTo({ left: pos, behavior: 'smooth' });
+    }, 3000);
   }
 
 });

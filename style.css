@@ -187,42 +187,11 @@ footer{text-align:center;padding:2rem;color:#999;}
 
 
 
-/* Photo slider inserted after About */
-.photo-slider {
-  padding: 2rem 0;
-}
-.photo-slider-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.photo-slider-track {
-  display: flex;
-  gap: 0.5rem;
-  transition: transform 0.3s ease;
-}
-.photo-card {
-  flex: 0 0 auto;
-  width: 120px; /* half size */
-}
-.photo-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-}
-.slider-btn.prev, .slider-btn.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
+/* Auto photo slider */
+.photo-slider { padding: 2rem 0; }
+.photo-slider-container { overflow: hidden; width: 100%; }
+.photo-slider-track { display: flex; gap: 0.5rem; will-change: transform; }
+.photo-card { flex: 0 0 auto; width: 120px; }
+.photo-card img { width: 100%; height: auto; border-radius: 4px; object-fit: cover; }
+/* Hide navigation buttons */
+.slider-btn { display: none; }
