@@ -1,32 +1,188 @@
 /* Base */
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Raleway',sans-serif;background:#F2F7FF;color:#2C2C2C;}
+h1,h2,h3{margin-bottom:1rem;font-weight:700;}
+p{margin-bottom:1rem;}
 
-/* Photo slider */
-.photo-slider {padding:4rem 2rem;text-align:center;}
-.photo-slider-container{position:relative;max-width:1200px;margin:auto;overflow:hidden;}
-.photo-slider-track{display:flex;gap:1rem;transition:transform 0.3s ease;}
-.photo-card{min-width:240px;flex-shrink:0;}
-.photo-card img{width:100%;border-radius:8px;}
+/* Header */
+header{position:fixed;top:0;left:0;width:100%;height:93px;background:white;box-shadow:0 2px 4px rgba(0,0,0,0.1);z-index:1000;}
+.header-content{position:relative;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:93px;padding:0 2rem;}
+.logo-flag-container{display:flex;flex-direction:column;align-items:flex-start;}
+.logo-img{height:40px;}
+.flag-img{width:24px;height:auto;position:fixed;top:66px;left:0;z-index:2002;transition:transform 0.1s linear;;opacity:0;transition:transform 0.1s linear,opacity 0.2s linear;}
+.progress-bar{position:absolute;bottom:0;left:0;width:0;height:4px;background:#005AFF;z-index:2001;}
 
-/* About section counters styling */
-.counters-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
-.counter-card{flex:1;min-width:150px;background:rgba(255,255,255,0.85);padding:1.5rem;border-radius:8px;}
-.counter-card span{font-size:2.5rem;font-weight:700;color:#005AFF;}
 
-/* Corporate block */
-.corporate{padding:4rem 2rem;text-align:center;background:white;}
-.corporate-gallery{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2rem 0;}
-.corporate-gallery img{width:300px;border-radius:8px;}
 
-/* Modal & Buttons */
+/* Buttons */
 .btn{padding:0.6rem 1.2rem;border:none;border-radius:4px;cursor:pointer;transition:background 0.3s;}
 .btn-primary{background:#005AFF;color:white;}
 .btn-primary:hover{background:#0041c2;}
+.btn-try{background:#A1C2F7;color:white;}
+.btn-try:hover{background:#8fbbe0;}
 .btn-secondary{background:#f2f2f2;color:#2C2C2C;border:1px solid #ccc;}
 .btn-secondary:hover{background:#e0e0e0;}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:flex;justify-content:center;align-items:center;}
+
+/* Hero */
+main{padding-top:66px;}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-image: url('assets/mnt.png'), url('https://via.placeholder.com/1200x400');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(100% + 30px), center;
+  background-size: contain, cover;
+}
+.hero-content{text-align:center;max-width:90%;}
+.hero h1{font-size:clamp(2rem,5vw,4rem);}
+.hero p{font-size:clamp(1rem,3vw,2rem);}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;margin-top:1rem;}
+
+/* About */
+.about{position:relative;overflow:hidden;padding:0;}
+.video-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+.about-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1;}
+.about-content{position:relative;z-index:2;padding:4rem 2rem;text-align:center;color:white;}
+.counters-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
+.counter-card{flex:1;min-width:150px;background:rgba(255,255,255,0.85);padding:1.5rem;border-radius:8px;backdrop-filter:blur(5px);}
+.counter-card span{font-size:2.5rem;font-weight:700;color:#005AFF;}
+
+/* Quiz */
+.quiz{padding:4rem 2rem;text-align:center;}
+.quiz-wrapper{max-width:600px;margin:2rem auto;}
+.quiz-card{background:white;padding:2rem;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+.quiz-question{font-size:1.5rem;color:#005AFF;}
+.quiz-options{display:flex;flex-direction:column;gap:1rem;}
+.quiz-option{padding:1rem;border:2px solid #005AFF;background:white;border-radius:8px;cursor:pointer;transition:background 0.3s;}
+.quiz-option:hover{background:#e0edff;}
+.quiz-option.correct{background:#d1fae5;border-color:#22c55e;color:#065f46;}
+.quiz-option.wrong{background:#fee2e2;border-color:#f87171;color:#7f1d1d;}
+.quiz-result{animation:fadeIn 1s ease;}
+.quiz-result h3{font-size:2rem;color:#005AFF;}
+.quiz-result .confetti{font-size:3rem;}
+/* Partners */
+.partners { text-align: center; padding: 4rem 2rem; background: #F2F7FF; }
+.logos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+.logo-box{padding:1rem;border:1px solid #ccc;border-radius:8px;}
+
+/* Corporate */
+.corporate{padding:4rem 2rem;text-align:center;background:#2C2C2C;color:#F2F7FF;}
+.corporate-gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin:2rem 0;}
+.corporate-gallery img{width:300px;border-radius:8px;}
+.corporate-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:1rem;}
+/* Team */
+.team{padding:4rem 2rem;text-align:center;background:#F2F7FF;}
+.team-slider{position:relative;max-width:1200px;margin:auto;}
+.slider-track{display:flex;overflow:hidden;scroll-behavior:smooth;}
+.team-card{min-width:240px;margin:0 1rem;background:white;border-radius:8px;padding:1rem;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.team-card img{width:100%;border-radius:8px;margin-bottom:1rem;}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:none;border-radius:50%;background:rgba(0,0,0,0.5);color:white;cursor:pointer;}
+.slider-btn.prev{left:-20px;}
+.slider-btn.next{right:-20px;}
+
+/* Modal */
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;}
 .modal-content{background:white;padding:2rem;border-radius:8px;max-width:500px;width:90%;position:relative;}
 .modal-content .close{position:absolute;top:1rem;right:1rem;font-size:1.5rem;cursor:pointer;}
 .modal-content input,.modal-content textarea{width:100%;margin-bottom:1rem;padding:0.5rem;border:1px solid #ccc;border-radius:4px;}
 .modal-buttons{display:flex;justify-content:flex-end;gap:1rem;}
+/* Footer */
+footer{text-align:center;padding:2rem;color:#999;}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.download-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+.download-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #005AFF;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+.download-btn:hover {
+  background: #0041c2;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-position: right calc(100% + 80px), center;
+  }
+}
+
+.photo-slider {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #F2F7FF;
+}
+.photo-slider h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.photo-slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+.photo-slider-track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.photo-card {
+  min-width: 220px;
+  margin: 0 0.5rem;
+  flex-shrink: 0;
+}
+.photo-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.slider-btn.photo-prev,
+.slider-btn.photo-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+.slider-btn.photo-prev {
+  left: -20px;
+}
+.slider-btn.photo-next {
+  right: -20px;
+}
+
+.partners h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
+
+/* Uniform partner logos */
+.logo-box {
+  width: 150px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Center partners heading and content */
+.partners { text-align: center; padding: 4rem 2rem; background: #F2F7FF; }
+.partners h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
+
+/* Partners section centering */
+.partners { text-align: center; padding: 4rem 2rem; background: #F2F7FF; }
+.partners h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
