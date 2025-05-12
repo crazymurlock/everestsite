@@ -12,10 +12,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   [contactBtn, signupQuiz, corpBtn].forEach(btn => {
     if (btn) btn.addEventListener("click", () => modal.style.display = "flex");
-  });
+  
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
   if (closeBtn) closeBtn.addEventListener("click", () => modal.style.display = "none");
   if (cancelModal) cancelModal.addEventListener("click", () => modal.style.display = "none");
-  window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+  window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; 
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
 
   window.addEventListener("scroll", () => {
     if (flag && progressBar && headerContent) {
@@ -26,7 +56,22 @@ document.addEventListener("DOMContentLoaded", () => {
       progressBar.style.width = `${translateX}px`;
       flag.style.opacity = scrollPercent > 0 ? "1" : "0";
     }
-  });
+  
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
 
   const aboutSection = document.getElementById("about");
   let countersAnimated = false;
@@ -44,9 +89,39 @@ document.addEventListener("DOMContentLoaded", () => {
               el.textContent = count;
               if (count===target) clearInterval(interval);
             }, 50);
-          });
+          
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
         }
-      });
+      
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
     }, {threshold: 0.5}).observe(aboutSection);
   }
 
@@ -66,15 +141,60 @@ document.addEventListener("DOMContentLoaded", () => {
           else {btn.classList.add("wrong");btn.textContent+=" 😢"; container.querySelector(`.quiz-option[data-index="${correct}"]`)?.classList.add("correct");}
           container.querySelectorAll(".quiz-option").forEach(b=>b.disabled=true);
           setTimeout(()=> current<questions.length-1 ? showQuestion() : showResult(), 1500);
-        });
-      });
+        
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
+      
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
     }
     function showResult(){
       container.innerHTML=`<div class="quiz-result"><h3>Вы набрали ${score} из ${questions.length}</h3><div class="confetti">🎉🎉🎉</div><button id="finalContact" class="btn btn-primary">Записаться</button></div>`;
       document.getElementById("finalContact")?.addEventListener("click",()=>modal.style.display="flex");
     }
     showQuestion();
-  });
+  
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
 
   tryPlay?.addEventListener("click",()=>scrollToQuiz());
 
@@ -83,8 +203,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn=document.querySelector(".slider-btn.next");
   if(track && prevBtn && nextBtn){
     const cardWidth=document.querySelector(".team-card").clientWidth+32;
-    prevBtn.onclick=()=>track.scrollBy({left:-cardWidth,behavior:"smooth"});
-    nextBtn.onclick=()=>track.scrollBy({left:cardWidth,behavior:"smooth"});
+    prevBtn.onclick=()=>track.scrollBy({left:-cardWidth,behavior:"smooth"
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
+    nextBtn.onclick=()=>track.scrollBy({left:cardWidth,behavior:"smooth"
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
   }
 
   // Photo slider controls
@@ -94,15 +244,105 @@ document.addEventListener("DOMContentLoaded", () => {
   if (photoTrack && photoPrev && photoNext) {
     const cardWidth = document.querySelector('.photo-card').clientWidth + 16;
     photoPrev.addEventListener('click', () => {
-      photoTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      photoTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' 
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
     });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
+    
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
     photoNext.addEventListener('click', () => {
-      photoTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      photoTrack.scrollBy({ left: cardWidth, behavior: 'smooth' 
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
+    
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
+  }
+
+
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
     });
   }
 
 });
 
 function scrollToQuiz(){
-  document.getElementById("quiz")?.scrollIntoView({behavior:"smooth"});
+  document.getElementById("quiz")?.scrollIntoView({behavior:"smooth"
+  // Photo slider controls
+  const track = document.querySelector('.photo-slider-track');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  if (track && prevBtn && nextBtn) {
+    const cardWidth = document.querySelector('.photo-card').clientWidth + 8;
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+  }
+
+});
 }

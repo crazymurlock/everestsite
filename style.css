@@ -63,7 +63,7 @@ main{padding-top:66px;}
 .quiz-result h3{font-size:2rem;color:#005AFF;}
 .quiz-result .confetti{font-size:3rem;}
 /* Partners */
-.partners{ padding:4rem 2rem;text-align:center; text-align: center;}
+
 .logos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
 .logo-box{padding:1rem;border:1px solid #ccc;border-radius:8px;}
 
@@ -163,7 +163,7 @@ footer{text-align:center;padding:2rem;color:#999;}
   right: -20px;
 }
 
-.partners h2 { text-align: center; }
+
 
 /* Uniform partner logos */
 .logo-box {
@@ -180,37 +180,49 @@ footer{text-align:center;padding:2rem;color:#999;}
 }
 
 /* Center partners heading and content */
-.partners {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #F2F7FF;
-}
-.partners h2 {
-  margin-bottom: 2rem;
-}
+
+
 
 /* Partners section centering */
-.partners {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #F2F7FF;
-}
-.partners h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
 
-/* Photo slider */
-.photo-slider { padding: 4rem 2rem; text-align: center; }
-.photo-slider-container { position: relative; max-width: 1200px; margin: auto; overflow: hidden; }
-.photo-slider-track { display: flex; gap: 1rem; transition: transform 0.3s ease; }
-.photo-card { min-width: 240px; flex-shrink: 0; }
-.photo-card img { width: 100%; border-radius: 8px; object-fit: cover; }
-.slider-btn.prev, .slider-btn.next {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); color: white; border: none;
-  width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10;
+
+
+/* Photo slider inserted after About */
+.photo-slider {
+  padding: 2rem 0;
 }
-.slider-btn.prev { left: -20px; }
-.slider-btn.next { right: -20px; }
+.photo-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.photo-slider-track {
+  display: flex;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.photo-card {
+  flex: 0 0 auto;
+  width: 120px; /* half size */
+}
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.slider-btn.prev, .slider-btn.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
