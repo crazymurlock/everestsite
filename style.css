@@ -63,7 +63,7 @@ main{padding-top:66px;}
 .quiz-result h3{font-size:2rem;color:#005AFF;}
 .quiz-result .confetti{font-size:3rem;}
 /* Partners */
-.partners{ padding:4rem 2rem;text-align:center; text-align: center;}
+.partners { text-align: center; padding: 4rem 2rem; background: #F2F7FF; }
 .logos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
 .logo-box{padding:1rem;border:1px solid #ccc;border-radius:8px;}
 
@@ -163,7 +163,7 @@ footer{text-align:center;padding:2rem;color:#999;}
   right: -20px;
 }
 
-.partners h2 { text-align: center; }
+.partners h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
 
 /* Uniform partner logos */
 .logo-box {
@@ -180,23 +180,27 @@ footer{text-align:center;padding:2rem;color:#999;}
 }
 
 /* Center partners heading and content */
-.partners {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #F2F7FF;
-}
-.partners h2 {
-  margin-bottom: 2rem;
-}
+.partners { text-align: center; padding: 4rem 2rem; background: #F2F7FF; }
+.partners h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
 
 /* Partners section centering */
-.partners {
-  text-align: center;
+.partners { text-align: center; padding: 4rem 2rem; background: #F2F7FF; }
+.partners h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
+
+/* Gallery grid */
+.gallery {
   padding: 4rem 2rem;
   background: #F2F7FF;
 }
-.partners h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
