@@ -244,3 +244,43 @@ footer{text-align:center;padding:2rem;color:#999;}
   max-height: 100%;
   object-fit: contain;
 }
+
+/* About heading styling */
+.about-content h2 {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Sponsors block styling */
+.sponsors {
+  padding: 4rem 2rem;
+  background: #F2F7FF;
+  text-align: center;
+}
+.sponsors h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2C2C2C;
+}
+.sponsors-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.sponsor-logo {
+  width: 150px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
